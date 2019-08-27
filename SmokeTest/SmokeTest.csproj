@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{32302195-8B15-45FE-A4AB-C15D24B85D09}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SmokeTest</RootNamespace>
+    <AssemblyName>SmokeTest</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>main.ico</ApplicationIcon>
+    <StartupObject>SmokeTest.Program</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\x64\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <OutputPath>bin\Release\x64\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\x86\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\Release\x86\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\SmokeTestControl\ArgumentsControl.cs">
+      <Link>ArgumentsControl.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\SmokeTestControl\ArgumentsControl.designer.cs">
+      <Link>ArgumentsControl.designer.cs</Link>
+      <DependentUpon>ArgumentsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\SmokeTestControl\ArgumentTypeControl.cs">
+      <Link>ArgumentTypeControl.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\SmokeTestControl\BooleanArgumentControl.cs">
+      <Link>BooleanArgumentControl.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\SmokeTestControl\CollectionConverter.cs">
+      <Link>CollectionConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\SmokeTestControl\ConstructorControl.cs">
+      <Link>ConstructorControl.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\SmokeTestControl\ConstructorControl.designer.cs">
+      <Link>ConstructorControl.designer.cs</Link>
+      <DependentUpon>ConstructorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\SmokeTestControl\GetInstanceForm.cs">
+      <Link>GetInstanceForm.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\SmokeTestControl\GetInstanceForm.designer.cs">
+      <Link>GetInstanceForm.designer.cs</Link>
+      <DependentUpon>GetInstanceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\SmokeTestControl\EditInstanceForm.cs">
+      <Link>EditInstanceForm.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\SmokeTestControl\EditInstanceForm.designer.cs">
+      <Link>EditInstanceForm.designer.cs</Link>
+      <DependentUpon>EditInstanceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\SmokeTestControl\EnumArgumentControl.cs">
+      <Link>EnumArgumentControl.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\SmokeTestControl\FieldControl.cs">
+      <Link>FieldControl.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\SmokeTestControl\FieldControl.designer.cs">
+      <Link>FieldControl.designer.cs</Link>
+      <DependentUpon>FieldControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\SmokeTestControl\LiteralArgumentControl.cs">
+      <Link>LiteralArgumentControl.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\SmokeTestControl\MainControl.cs">
+      <Link>MainControl.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\SmokeTestControl\MainControl.designer.cs">
+      <Link>MainControl.designer.cs</Link>
+      <DependentUpon>MainControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\SmokeTestControl\MemberControl.cs">
+      <Link>MemberControl.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\SmokeTestControl\MethodControlPanel.cs">
+      <Link>MethodControlPanel.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\SmokeTestControl\MethodControlPanel.designer.cs">
+      <Link>MethodControlPanel.designer.cs</Link>
+      <DependentUpon>MethodControlPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\SmokeTestControl\NullCheckBox.cs">
+      <Link>NullCheckBox.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\SmokeTestControl\ObjectPool.cs">
+      <Link>ObjectPool.cs</Link>
+    </Compile>
+    <Compile Include="..\SmokeTestControl\PreviewControl.cs">
+      <Link>PreviewControl.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\SmokeTestControl\PreviewControl.designer.cs">
+      <Link>PreviewControl.designer.cs</Link>
+      <DependentUpon>PreviewControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\SmokeTestControl\PropertyControl.cs">
+      <Link>PropertyControl.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\SmokeTestControl\PropertyControl.designer.cs">
+      <Link>PropertyControl.designer.cs</Link>
+      <DependentUpon>PropertyControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\SmokeTestControl\ReferenceArgumentControl.cs">
+      <Link>ReferenceArgumentControl.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\SmokeTestControl\UnsupportedArgumentControl.cs">
+      <Link>UnsupportedArgumentControl.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\SmokeTestControl\Utility.cs">
+      <Link>Utility.cs</Link>
+    </Compile>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="..\SmokeTestControl\ArgumentsControl.resx">
+      <Link>ArgumentsControl.resx</Link>
+      <DependentUpon>ArgumentsControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\SmokeTestControl\ConstructorControl.resx">
+      <Link>ConstructorControl.resx</Link>
+      <DependentUpon>ConstructorControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\SmokeTestControl\GetInstanceForm.resx">
+      <Link>GetInstanceForm.resx</Link>
+      <DependentUpon>GetInstanceForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\SmokeTestControl\EditInstanceForm.resx">
+      <Link>EditInstanceForm.resx</Link>
+      <DependentUpon>EditInstanceForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\SmokeTestControl\FieldControl.resx">
+      <Link>FieldControl.resx</Link>
+      <DependentUpon>FieldControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\SmokeTestControl\MainControl.resx">
+      <Link>MainControl.resx</Link>
+      <DependentUpon>MainControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\SmokeTestControl\MethodControlPanel.resx">
+      <Link>MethodControlPanel.resx</Link>
+      <DependentUpon>MethodControlPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\SmokeTestControl\PreviewControl.resx">
+      <Link>PreviewControl.resx</Link>
+      <DependentUpon>PreviewControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\SmokeTestControl\PropertyControl.resx">
+      <Link>PropertyControl.resx</Link>
+      <DependentUpon>PropertyControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Settings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="res\fairypillar_hst_900_about.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="main.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
